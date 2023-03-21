@@ -4,7 +4,7 @@
 
 
 
-The overall aim of this project is to streamline the pre-processing of sattelite imagery for object recognition modeling. 
+The overall aim of this project is to streamline the pre-processing of satellite imagery for object recognition modeling. 
 
 <br> 
 
@@ -12,7 +12,7 @@ The overall aim of this project is to streamline the pre-processing of sattelite
 
 <br> 
 
-- clipped version of the sattelite imagery via a shapefile which defines where training and test images can be found
+- clipped version of the satellite imagery via a shapefile which defines where training and test images can be found
 
 <br> 
 
@@ -25,14 +25,14 @@ All steps for pre-processing the data for an object recognition model are then a
 
 <br><br>
 
-Once the inputs are created, The imagery collection and bounding box raster are then reduced to a smaller set of model compatible tiles where objects exist or predictions could be made. Text annotations are then created for each tile containing a labeled object, by analyzing it's matching mask tile. Then, images are sorted into train or test folders. 
+Once the inputs are created, the imagery collection and bounding box raster are then reduced to a smaller set of model compatible tiles where objects exist, or predictions could be made. Text annotations are then created for each tile containing a labeled object, by analyzing its matching mask tile. Then, images are sorted into train or test folders. 
 
 
 <br><br>
 
 ### Background
 
-This project aims to increase awareness and access to public lands, of which the most approachable use is car camping, also known as dispersed camping or RVing. The scope focuses on a single county in Colorado, with a high density of public land, and where camping is permitted on any of the numerous forest roads. Locations for disperesed camping are not readily provided by all USFS offices. When this information is provided, it's usually in paper maps and difficult to source or understand for the average camper. 
+This project aims to increase awareness and access to public lands, of which the most approachable use is car camping, also known as dispersed camping or RVing. The scope focuses on a single county in Colorado, with a high density of public land, and where camping is permitted on any of the numerous forest roads. Locations for dispersed camping are not readily provided by all USFS offices. When this information is provided, it's usually in paper maps and difficult to source or understand for the average camper. 
 
 
 <br>
@@ -52,7 +52,7 @@ For a more clear walkthrough of the project, visit my medium account, where I'm 
 
 - US Department of Agriculture orthoimagery was clipped by a region of interest, a buffer of 200 feet from any national forest, BLM, or state trust road. 
 
-- THe imagery was then reduced via a moving window raster slicer, and only pertinent training and testing images were retained.
+- The imagery was then reduced via a moving window raster slicer, and only pertinent training and testing images were retained.
 
 - Bounding boxes were manually drawn in QGIS and converted to a raster file where pixels indicate box locations, for 180 campsites at known destinations across the county.
 
@@ -86,6 +86,11 @@ Notebooks
 
 - Displays GIS data, giving context for the projects initial scope and pre-work in qgis
 
+
+[Co-Lab Model](https://colab.research.google.com/drive/1kn_0hb6SgXVEqNms4JfLIzQUtOCYo9IA?usp=sharing)
+
+- Notebook for applying model
+
 <br>
 
 Data
@@ -112,10 +117,4 @@ QGIS Projects
 **due to the tile and mask folders equaling 40GB in total, only the tiles containing data for training were uploaded (~90)**
 
 ---
-
-
-
-
-
-
 
